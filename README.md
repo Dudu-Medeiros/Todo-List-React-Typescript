@@ -79,6 +79,6 @@ Durante o desenvolvimento, serão explorados os seguintes conceitos:
 
 ## 👨‍💻 Autor
 
-Desenvolvido por **[Seu nome]**.
+Desenvolvido por **[Eduardo Guilherme de Medeiros Antonino]**.
 
-[GitHub](https://github.com/SEU-USUARIO) | [LinkedIn](https://www.linkedin.com/)
+[GitHub](https://github.com/Dudu-Medeiros) | [LinkedIn](https://www.linkedin.com/in/eduardo-guilherme-5b41a9266/)
