@@ -1,40 +1,69 @@
-form {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    width: 740px;
-    margin: 30px auto;
+.todo-add-form {
+  display: flex;
+  gap: 12px;
+  width: 740px; /* Largura ajustada para alinhar com o padding do container de 800px */
+  margin: 0 auto;
 }
 
-form input {
-    background-color: var(--color-input);
-    border: 2px solid var(--color-border);
-    width: 580px;
-    height: 50px;
-    padding-left: 20px;
-    color: var(--color-text-primary);
-
-    border-radius: 10px;
+.todo-add-form input {
+  flex: 1;
+  background-color: var(--color-input);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  padding: 16px 20px;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: border-color 0.2s ease;
 }
 
-form button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    border: none;
-    background-color: var(--color-primary);
-    color: var(--color-text-primary);
-    font-size: 16px;
-    font-weight: 500;
-    transition: 0.4s;
-
-    width: 150px;
-    height: 50px;
+.todo-add-form input:focus {
+  border-color: var(--color-primary);
 }
 
-form button:hover {
-    background-color: var(--color-primary-hover);
+.todo-add-form input::placeholder {
+  color: var(--color-text-secondary);
 }
 
+.todo-add-form button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+  color: var(--color-text-primary);
+}
+
+.btn-add {
+  background: var(--gradient-primary);
+}
+
+.btn-add:hover {
+  opacity: 0.9;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-save {
+  background-color: var(--color-success);
+}
+
+.btn-save:hover {
+  opacity: 0.9;
+}
+
+.btn-cancel {
+  background-color: var(--color-input);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+}
+
+.btn-cancel:hover {
+  background-color: var(--color-border);
+  color: var(--color-text-primary);
+}

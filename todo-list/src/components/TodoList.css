@@ -1,9 +1,9 @@
 .todo-list {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  width: 780px;
-  max-height: 260px;
+  gap: 8px;
+  width: 740px; 
+  max-height: 310px;
   margin: 20px auto;
   padding-right: 8px;
   overflow-y: auto;
@@ -14,17 +14,15 @@
   display: flex;
   align-items: center;
   gap: 16px;
-  flex-shrink: 0;
-  background-color: #121420;
-  padding: 18px 20px;
+  background-color: var(--color-surface);
+  padding: 16px 20px;
   border-radius: 12px;
-  cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.03);
-  transition: background-color 0.2s ease;
+  border: 1px solid var(--color-border);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .task-item:hover {
-  background-color: #181a29;
+  background-color: var(--color-item-hover);
 }
 
 .checkbox-container {
@@ -32,6 +30,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .checkbox-container input {
@@ -45,30 +44,66 @@
 .custom-checkbox {
   width: 24px;
   height: 24px;
-  border: 2px solid #3a3f58;
+  border: 2px solid var(--color-border);
   border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease;
-  color: white;
+  color: var(--color-text-primary);
+  background-color: var(--color-input);
 }
 
 .checkbox-container input:checked ~ .custom-checkbox {
-  background-color: #6366f1;
-  border-color: #6366f1;
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
-.task-item p {
-  color: #f8fafc;
+.task-title {
+  flex: 1;
+  color: var(--color-text-primary);
   margin: 0;
   font-size: 16px;
+  transition: color 0.2s ease;
+}
+
+.task-item.completed .task-title {
+  text-decoration: line-through;
+  color: var(--color-text-completed);
+}
+
+.task-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background-color: var(--color-input);
   transition: all 0.2s ease;
 }
 
-.task-item.completed p {
-  text-decoration: line-through;
-  color: #475569;
+.edit-btn {
+  color: var(--color-text-secondary);
+}
+
+.edit-btn:hover {
+  background-color: var(--color-border);
+  color: var(--color-text-primary);
+}
+
+.delete-btn {
+  color: var(--color-danger);
+}
+
+.delete-btn:hover {
+  background-color: var(--color-danger);
+  color: var(--color-text-primary);
 }
 
 .todo-list::-webkit-scrollbar {
@@ -80,6 +115,6 @@
 }
 
 .todo-list::-webkit-scrollbar-thumb {
-  background-color: #6366f1;
+  background-color: var(--color-primary);
   border-radius: 10px;
 }
