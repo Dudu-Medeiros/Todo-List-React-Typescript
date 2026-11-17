@@ -1,0 +1,59 @@
+.todo-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 740px;
+  margin: 16px auto 0;
+  padding: 20px 24px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+}
+
+.stats {
+  display: flex;
+  gap: 24px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-text-primary);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.badge {
+  background-color: var(--color-input);
+  color: var(--color-text-primary);
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.badge.success {
+  background-color: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+.btn-clear {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-input);
+  border: 1px solid var(--color-border);
+  color: var(--color-danger);
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.btn-clear:hover {
+  background-color: var(--color-danger);
+  color: var(--color-text-primary);
+  border-color: var(--color-danger);
+}

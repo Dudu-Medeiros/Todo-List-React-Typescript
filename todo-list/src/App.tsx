@@ -4,6 +4,7 @@ import { useState } from 'react'
 
 import TodoAdd from './components/TodoAdd'
 import TodoList from './components/TodoList'
+import TodoFooter from './components/TodoFooter'
 
 export interface ITask {
   id: string
@@ -44,6 +45,10 @@ function App() {
     setTasks((prev) => prev.filter((task) => task.id !== taskId))
   }
 
+  function clearCompletedTasks() {
+    setTasks((prev) => prev.filter((task) => !task.isCompleted))
+  }
+
   function editTask(task: ITask) {
     setEditingTask(task)
   }
@@ -51,6 +56,9 @@ function App() {
   function cancelEdit() {
     setEditingTask(null)
   }
+
+  const totalTasks = tasks.length
+  const completedTasks = tasks.filter(task => task.isCompleted).length
 
   return (
     <div className="box-todo">
@@ -75,6 +83,12 @@ function App() {
         onToggleTask={toggleTask}
         onDeleteTask={deleteTask}
         onEditTask={editTask}
+      />
+
+      <TodoFooter 
+        totalTasks={totalTasks}
+        completedTasks={completedTasks}
+        onClearCompleted={clearCompletedTasks}
       />
     </div>
   )
